@@ -31,6 +31,8 @@ change
   {
     starSize: 1.5,
     showInfo: false
-  );
+  )).on('change', function(e, stars, index){
+    alert("Thx for ${stars} stars!");
+  });
 </script>
 ```
