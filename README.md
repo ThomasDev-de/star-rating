@@ -1,6 +1,6 @@
 # jQuery star-rating plugin
 
-### setup
+### Setup
 
 ```
 wrapperClasses: 'p-5 shadow',
@@ -15,7 +15,7 @@ titles: ["Sehr schlecht", "Schlecht", "Mittel", "Gut", "Sehr gut!"],
 inputName: 'rating'
 ```
 
-### example
+### Example
 
 ```
 <div class="rating"></div>
