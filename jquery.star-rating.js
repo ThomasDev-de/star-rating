@@ -1,12 +1,12 @@
 (function ($) {
     $.fn.starRating = function (setup) {
         let settings = $.extend(true, {
-            wrapperClasses: '',
+            wrapperClasses: 'p-5 shadow',
             starIconEmpty: 'far fa-star',
             starIconFull: 'fas fa-star',
             starColorEmpty: 'lightgray',
             starColorFull: '#FFC107',
-            starsSize: 3, // em
+            starsSize: 4, // em
             stars: 5,
             showInfo: true,
             titles: ["Sehr schlecht", "Schlecht", "Mittel", "Gut", "Sehr gut!"],
@@ -97,7 +97,7 @@
                         // select radio
                         wrapper.find('input[type="radio"][value="' + value + '"]').prop('checked', true);
                         if (settings.showInfo) {
-                            wrapper.find('.js-wc-rating-value').text(value);
+                            wrapper.find('.js-wc-rating-value').text(value).css('color', getTextColor(value));
                             wrapper.find('.js-wc-label').text(label).css('color', getTextColor(value));
                         }
 
@@ -121,7 +121,7 @@
                     })
             }
 
-            return wrapper;
+            return this;
         }
 
     };
