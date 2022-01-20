@@ -31,8 +31,11 @@ change // trigger when star is clicked
   {
     starSize: 1.5,
     showInfo: false
-  )).on('change', function(e, stars, index){
-    alert("Thx for ${stars} stars!");
-  });
+  ));
+  
+   $(document).on('change', '.rating',
+        function (e, stars, index) {
+            alert(`Thx for ${stars} stars!`);
+        });
 </script>
 ```
