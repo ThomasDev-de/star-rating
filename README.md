@@ -13,9 +13,10 @@ titles: ["Sehr schlecht", "Schlecht", "Mittel", "Gut", "Sehr gut!"],
 inputName: 'rating'
 
 ### example
-<div class="rating"></div>
 
 ```
+<div class="rating"></div>
+
 <script>
   $('.rating').starRating(
   {
