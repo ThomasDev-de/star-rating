@@ -1,6 +1,8 @@
 # jQuery star-rating plugin
 
 ### setup
+
+```
 wrapperClasses: 'p-5 shadow',
 starIconEmpty: 'fa fa-star-o',
 starIconFull: 'fa fa-star',
@@ -11,6 +13,7 @@ stars: 5,
 showInfo: true,
 titles: ["Sehr schlecht", "Schlecht", "Mittel", "Gut", "Sehr gut!"],
 inputName: 'rating'
+```
 
 ### example
 
