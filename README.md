@@ -15,6 +15,7 @@ inputName: 'rating'
 ### example
 <div class="rating"></div>
 
+```
 <script>
   $('.rating').starRating(
   {
@@ -22,3 +23,4 @@ inputName: 'rating'
     showInfo: false
   );
 </script>
+```
