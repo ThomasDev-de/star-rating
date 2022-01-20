@@ -18,7 +18,7 @@ inputName: 'rating'
 ### events
 
 ```
-change
+change // trigger when star is clicked
 ```
 
 ### Example
