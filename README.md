@@ -31,7 +31,7 @@ change // trigger when star is clicked
   {
     starSize: 1.5,
     showInfo: false
-  ));
+  });
   
    $(document).on('change', '.rating',
         function (e, stars, index) {
