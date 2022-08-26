@@ -34,8 +34,9 @@ change // trigger when star is clicked
   });
   
    $(document).on('change', '.rating',
-        function (e, stars, index) {
-            alert(`Thx for ${stars} stars!`);
-        });
+      function (e, stars, index) {
+          alert(`Thx for ${stars} stars!`);
+      });
+   });
 </script>
 ```
