@@ -2,7 +2,7 @@
 
 ### Options
 
-```
+```js
 {
   wrapperClasses: 'p-5 shadow',
   starIconEmpty: 'fa fa-star-o',
@@ -25,7 +25,7 @@ change // trigger when star is clicked
 
 ### Example
 
-```
+```html
 <div class="rating"></div>
 
 <script>
