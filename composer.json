@@ -1,0 +1,17 @@
+{
+  "name": "webcito/jquery-star-rating",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "thomas",
+      "email": "t.kirsch@webcito.de"
+    }
+  ],
+  "require": {
+    "components/jquery": "3.6.0",
+    "components/font-awesome": "6.2.0",
+    "twbs/bootstrap": "5.2.0"
+  }
+}

@@ -1,15 +1,15 @@
 (function ($) {
     $.fn.starRating = function (setup) {
         let settings = $.extend(true, {
-            wrapperClasses: 'p-5 shadow',
-            starIconEmpty: 'far fa-star',
-            starIconFull: 'fas fa-star',
-            starColorEmpty: 'lightgray',
+            wrapperClasses: '',
+            starIconEmpty: 'fa-regular fa-star',
+            starIconFull: 'fa-solid fa-star',
+            starColorEmpty: '#c2c2c1',
             starColorFull: '#FFC107',
-            starsSize: 4, // em
+            starsSize: 3, // em
             stars: 5,
             showInfo: true,
-            titles: ["Sehr schlecht", "Schlecht", "Mittel", "Gut", "Sehr gut!"],
+            titles: ["very bad", "bad", "medium", "good", "very good"],
             inputName: 'rating'
         }, setup || {});
 
@@ -20,11 +20,11 @@
         function getTextColor(value) {
             switch (true) {
                 case value < (settings.stars / 3):
-                    return 'red';
+                    return 'var(--bs-danger)';
                 case value < (settings.stars / 3 * 2):
-                    return 'orange';
+                    return 'var(--bs-warning)';
                 default:
-                    return 'green';
+                    return 'var(--bs-success)';
             }
         }
 
@@ -61,6 +61,7 @@
                 settings.wrapperClasses.split(' ').forEach(className => {
                     wrapper.addClass(className);
                 });
+
                 if (settings.showInfo) {
                     $('<strong>', {
                         html: "0",
@@ -75,7 +76,7 @@
                         css: {
                             marginTop: 0
                         },
-                        html: "Bewerte uns!"
+                        html: "Rate us!"
                     }).insertBefore(starWrapper);
                 }
                 wrapper.css({
@@ -93,7 +94,8 @@
                     .on('click', 'i', function (e) {
                         let index = $(e.currentTarget).data('index'),
                             value = index + 1,
-                            label = settings.titles[index] || value + " Sterne";
+                            titleIndex = Math.floor(settings.titles.length  / settings.stars * index  ) ,
+                            label = settings.titles[titleIndex] || value + " Sterne";
                         // select radio
                         wrapper.find('input[type="radio"][value="' + value + '"]').prop('checked', true);
                         if (settings.showInfo) {

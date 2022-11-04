@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../vendor/components/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Demo</title>
+</head>
+<body>
+<div class="rating"></div>
+<script src="../vendor/components/jquery/jquery.min.js"></script>
+<script src="../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/jquery.star-rating.js"></script>
+<script>
+    (function($){
+        $('.rating').starRating(
+            {
+                starSize: 1.5,
+                showInfo: true,
+                stars: 10
+            });
+
+        $(document).on('change', '.rating',
+            function (e, stars, index) {
+                // alert(`Thx for ${stars} stars!`);
+            }
+        );
+    }(jQuery));
+
+</script>
+</body>
+</html>
