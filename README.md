@@ -2,7 +2,7 @@
 
 ![](demo/star-rating.png)
 
-### Options
+## OPTIONS
 
 ```js
 let DEFAULTS = {
