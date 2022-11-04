@@ -4,7 +4,7 @@
             wrapperClasses: '',
             starIconEmpty: 'fa-regular fa-star',
             starIconFull: 'fa-solid fa-star',
-            starColorEmpty: '#c2c2c1',
+            starColorEmpty: 'lightgray',
             starColorFull: '#FFC107',
             starsSize: 3, // em
             stars: 5,
